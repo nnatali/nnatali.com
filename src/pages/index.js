@@ -1,5 +1,6 @@
 import * as React from "react"
-import { SEO } from "../components/seo"
+import { SiteSEO } from "../components/seo"
+import { Script } from "gatsby"
 
 const pageStyles = {
   color: "#232129",
@@ -164,6 +165,10 @@ const IndexPage = () => {
           </li>
         ))}
       </ul>
+      <Script id="second-unique-id" strategy="idle">{`console.log('Hello world')`}</Script>
+      {/* <Script src="https://my-example-script" strategy="post-hydrate" /> by default  */}
+      {/* <Script src="https://my-example-script" strategy="idle" /> i.e. when other dom interactions are loaded */}
+      {/* <Script src="https://my-example-script" strategy="off-main-thread" /> i.e. google analytics whitout component */}
     </main>
   )
 }
@@ -171,5 +176,5 @@ const IndexPage = () => {
 export default IndexPage
 
 export const Head = () => (
-  <SEO />
+  <SiteSEO />
 )
