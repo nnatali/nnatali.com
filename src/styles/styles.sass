@@ -1,0 +1,33 @@
+@import variables
+@import functions
+@import mixins
+@import url(https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,400;0,700;1,400&display=swap)
+
+*
+  box-sizing: border-box
+
+body
+  background-color: $blue
+  font-size: rem($base-font-size)
+  line-height: 1.5
+  font-family: $base-font-family
+  font-weight: $font-normal
+  margin: 0
+  padding: 0
+
+p,
+li,
+h1,
+h2,
+h3,
+h4
+  overflow-wrap: break-word
+  margin-top: 0
+  margin-bottom: 0
+
+h1,
+h2,
+h3,
+h4,
+strong
+  font-weight: $font-bold

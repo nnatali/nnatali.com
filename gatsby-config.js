@@ -3,49 +3,77 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Nelly Natalí | Front-end developer`,
+    title: `Nelly Natalí | Front-end developer | Boston, MA`,
     siteUrl: `https://www.nnatali.com`,
-    description: `Front-end developer, now in Boston, MA`,
+    description: `Hey there! My name is Natalí and I am a front-end developer. Let's build something together.`,
     twitterUsername: `@nnatali`,
-    image: `/card.png`,
+    image: `/site-image.png`,
   },
-  plugins: ["gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-    resolve: 'gatsby-source-filesystem',
+  plugins: ["gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-mdx",
+  {
+    resolve: 'gatsby-plugin-sass',
     options: {
-      "name": "images",
-      "path": "./src/images/"
+      additionalData: `@import ${__dirname}/src/styles/global`,
+    }
+  },
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `images`,
+      path: `${__dirname}/src/images`,
     },
-    __key: "images"
   },
   {
     resolve: `gatsby-plugin-google-gtag`,
     options: {
-      // You can add multiple tracking ids and a pageview event will be fired for all of them.
       trackingIds: [
-        "G-ME5KRQZPNB", // Google Analytics / GA
-        //"AW-CONVERSION_ID", // Google Ads / Adwords / AW
-        //"DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
+        "G-ME5KRQZPNB",
       ],
-      // This object gets passed directly to the gtag config command
-      // This config will be shared across all trackingIds
-      gtagConfig: {
-        //optimize_id: "OPT_CONTAINER_ID",
-        //anonymize_ip: true,
-        //cookie_expires: 0,
-      },
-      // This object is used for configuration specific to this plugin
       pluginConfig: {
-        // Puts tracking script in the head instead of the body
         head: false,
-        // Setting this parameter is also optional
-        //respectDNT: true,
-        // Avoids sending pageview hits from custom paths
-        //exclude: ["/preview/**", "/do-not-track/me/too/"],
-        // Defaults to https://www.googletagmanager.com
-        //origin: "YOUR_SELF_HOSTED_ORIGIN",
-        // Delays processing pageview events on route update (in milliseconds)
-        //delayOnRouteUpdate: 0,
+        respectDNT: true,
       },
     },
-  }]
+  },
+  {
+    resolve: `gatsby-plugin-prettier-build`,
+    options: {
+      types: ['html'],
+      concurrency: 20,
+      verbose: true
+    }
+  },
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            maxWidth: 1140,
+          },
+        },
+        {
+          resolve: `gatsby-remark-prismjs`,
+          options: {
+            classPrefix: "language-",
+            inlineCodeMarker: null,
+            aliases: {},
+            showLineNumbers: false,
+            noInlineHighlight: false,
+            escapeEntities: {},
+          },
+        },
+      ],
+    },
+  },
+  {
+    resolve: 'gatsby-plugin-svgr-loader',
+    options: {
+        rule: {
+          include: /\.inline\.svg$/
+        }
+    }
+  },
+]
 };

@@ -1,0 +1,13 @@
+@mixin breakpoint($breakpoint, $direction)
+  $breakpoint-value: map-get($media-breakpoints, $breakpoint)
+  $direction-value: map-get($media-directions, $direction)
+  @if ($direction == only)
+    @media (min-width: map-get($media-breakpoints, prevKey($breakpoint))) and (max-width: ($breakpoint-value))
+      @content
+  @else
+    @media ($direction-value: ($breakpoint-value))
+      @content
+
+@mixin hover()
+  @media (hover: hover)
+    @content

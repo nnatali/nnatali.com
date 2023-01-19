@@ -1,4 +1,5 @@
 import React from "react"
+
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 export const SiteSEO = ({ title, description, pathname, children }) => {
@@ -14,11 +15,11 @@ export const SiteSEO = ({ title, description, pathname, children }) => {
 
   return (
     <>
-      <title>{seo.title}</title>
+      <title>{defaultTitle} | {seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:title" content={`${defaultTitle} | ${seo.title}`} />
       <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
@@ -31,7 +32,7 @@ export const SiteSEO = ({ title, description, pathname, children }) => {
           "@type": "Organization",
           "url": "${seo.url}",
           "logo": "${seo.image}",
-          "name" : "${seo.title}"
+          "name" : "${defaultTitle} | ${seo.title}"
         }
       `}
       </script>

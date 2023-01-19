@@ -9,7 +9,7 @@ const HeadComponents = [
 ]
 
 const BodyAttributes = {
-  className: "my-body-class"
+  // className: "my-body-class"
 }
 
 exports.onRenderBody = ({

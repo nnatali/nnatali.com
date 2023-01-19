@@ -1,0 +1,31 @@
+// https://stephenkoo.github.io/tips/top-sass-mixins/
+// Converts one px value to rem.
+// `$zero-safe-rem-value` returns a 0 if `$px-value` is 0.
+@function convert-to-rem($px-value)
+  $rem-value: calc($px-value / $base-font-size)
+  $zero-safe-rem-value: if($px-value == 0, 0, $rem-value)
+  @return $zero-safe-rem-value
+
+// https://stephenkoo.github.io/tips/top-sass-mixins/
+// Converts single or multiple px values into rem.
+// Accepts multiple values in the form: `rem(20px 30px 0 40px)`.
+// Modified
+@function rem($px-values)
+  $rem-values: ()
+  @each $px-value in $px-values
+    $rem-values: append($rem-values, convert-to-rem($px-value) + rem)
+  @return $rem-values
+
+// https://codepen.io/Limey_88/pen/BoQmMq
+@function nextKey($current-value, $mapped-list:$media-breakpoints)
+  $the-list: map-keys($mapped-list)
+  $the-index: ( index( $the-list, $current-value) ) + 1
+  $new-value: nth($the-list, $the-index)
+  @return $new-value
+
+// Based in Limey_88 pen
+@function prevKey($current-value, $mapped-list:$media-breakpoints)
+  $the-list: map-keys($mapped-list)
+  $the-index: ( index( $the-list, $current-value) ) - 1
+  $new-value: nth($the-list, $the-index)
+  @return $new-value
