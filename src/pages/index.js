@@ -1,16 +1,17 @@
 import * as React from 'react'
-import { Script } from "gatsby"
-import Layout from '../components/layout'
-import { SiteSEO } from "../components/seo"
+import { Script } from 'gatsby'
+import SiteSEO from '../components/Seo'
+import Layout from '../components/Layout'
+import About from '../components/About'
+import Projects from '../components/Projects'
 
 const IndexPage = () => {
-  const VisibleTitle = 'Front-end developer'
+  
   return (
-    <Layout title={VisibleTitle}>
-      <Script id="second-unique-id" strategy="idle">{`console.log('Hello world')`}</Script>
-      {/* <Script src="https://my-example-script" strategy="post-hydrate" /> by default  */}
-      {/* <Script src="https://my-example-script" strategy="idle" /> i.e. when other dom interactions are loaded */}
-      {/* <Script src="https://my-example-script" strategy="off-main-thread" /> i.e. google analytics whitout component */}
+    <Layout title="Front-end developer">
+      <About />
+      <Projects />
+      <Script id="script-lines-id" strategy="idle" src="/scripts/lines.js" />
     </Layout>
   )
 }

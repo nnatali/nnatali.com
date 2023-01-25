@@ -3,149 +3,171 @@
   flex-direction: column
   position: relative
   height: rem(500px)
+  background-color: $blue
+  z-index: 10
+
+  @include breakpoint('mobile','up')
+    height: rem(800px)
+
+  canvas
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 100%
+    height: 0
+    left: 0
+    z-index: 1
+    animation: height 0.5s 1.8s forwards
   
+  // &:before
+  //   content: ''
+  //   display: block
+  //   width: 0%
+  //   height: rem(109px)
+  //   border-top: rem(1px) solid $white
+  //   border-bottom: rem(1px) solid $white
+  //   opacity: 0.3
+  //   margin: auto auto 0 0
+  //   animation: width 1s forwards 0.3s
+  //   position: absolute
+  //   top: rem(174px)
+  //   left: 0
+
+  //   @include breakpoint('mobile','up')
+  //     top: rem(324px)
+
+  // &:after
+  //   content: ''
+  //   display: block
+  //   width: 0%
+  //   height: rem(1px)
+  //   background: $white
+  //   opacity: 0.3
+  //   margin: auto auto 0 0
+  //   animation: width 1s forwards 0.3s
+  //   position: absolute
+  //   top: rem(262px)
+  //   right: 0
+  //   animation-delay: 1.5s
+
+  //   @include breakpoint('mobile','up')
+  //     top: rem(412px)
+
+.logo
+  display: block
+  width: 70%
+  max-width: rem(180px)
+  margin: auto auto rem(20px)
+  position: relative
+  height: rem(109px)
+  z-index: 2
+  
+  &:after
+    content: ''
+    display: block
+    width: 15%
+    height: 83.2%
+    background: $white
+    opacity: 0.6
+    position: absolute
+    transform: rotate(-40deg)
+    top: -1.75%
+    left: 64.7%
+    z-index: 1
+
   &:before
     content: ''
     display: block
-    width: 0%
-    height: rem(109px)
-    border-top: rem(1px) solid $white
-    border-bottom: rem(1px) solid $white
-    opacity: 0.3
-    margin: auto auto 0 0
-    animation: width 1s forwards 0.3s
+    width: 100%
+    height: calc(100% - 1px)
+    background: $blue
     position: absolute
-    top: rem(174px)
-    left: 0
-
-  &:after
-    content: ''
-    display: block
-    width: 0%
-    height: rem(1px)
-    background: $white
-    opacity: 0.3
-    margin: auto auto 0 0
-    animation: width 1s forwards 0.3s
-
-  &:after
-    position: absolute
-    top: rem(262px)
+    top: 0
     right: 0
-    animation-delay: 1.5s
+    z-index: 2 
+    animation: logo3 1.75s forwards 0.35s
 
-  &-logo
+  span
+    text-indent: rem(-9999px)
+    overflow: hidden
     display: block
-    width: 70%
-    max-width: rem(180px)
-    margin: auto auto rem(20px)
-    position: relative
-    height: rem(109px)
-
-    &:after
-      content: ''
-      display: block
-      width: 15%
-      height: 83.2%
-      background: $white
-      opacity: 0.6
-      position: absolute
-      transform: rotate(-40deg)
-      top: -1.75%
-      left: 64.7%
-      z-index: 1
-
-    &:before
-      content: ''
-      display: block
-      width: 100%
-      height: 100%
-      background: $blue
-      position: absolute
-      top: 0
-      right: 0
-      z-index: 2 
-      animation: logo3 2s forwards 0.35s
-
-    span
-      text-indent: -9999px
-      overflow: hidden
-      display: block
-
-      &:before,
-      &:nth-of-type(1):after
-        content: ''
-        display: block
-        width: 18%
-        height: 0%
-        background: $white
-        position: absolute
-        
-      &:nth-of-type(1)
-        &:before
-          bottom: 0
-          left: 0
-          z-index: 3
-          animation: logo1 0.75s forwards
-        &:after
-          bottom: 20%
-          right: 1.5%
-          height: 0%
-          width: 16%
-          z-index: 3
-          animation: logo2 0.7s forwards 1.8s
-
-      &:nth-of-type(2)
-        &:before
-          bottom: 0
-          left: 44%
-          z-index: 3
-          animation: logo1 0.6s forwards 0.9s
-        
-        &:after
-          content: ''
-          display: block
-          width: 17%
-          height: 105%
-          background: $white
-          opacity: 0.6
-          position: absolute
-          transform: rotate(-38deg)
-          top: -2.5%
-          left: 22.5%
-          z-index: 1
-
-  &-title
-    background-color: $white
-    color: $blue
-    font-size: rem(14px)
-    font-weight: $font-normal
-    text-transform: uppercase
-    margin: 0 auto auto
-    padding: rem(0 6px)
-    opacity: 0
-    animation: opacity 1s 2s forwards
-    transform: translateX(-1px)
 
     &:before,
-    &:after
+    &:nth-of-type(1):after
       content: ''
       display: block
-      width: 0%
-      height: rem(1px)
+      width: 18%
+      height: 0%
       background: $white
-      opacity: 0.3
-      margin: auto auto 0 0
-      animation: width 1s forwards 2s
       position: absolute
-      top: 0
-      left: 50%
-      transform: translateX(-50%)
+      
+    &:nth-of-type(1)
+      &:before
+        bottom: 0
+        left: 0
+        z-index: 3
+        animation: logo1 0.75s forwards
+      &:after
+        bottom: 20%
+        right: 1.5%
+        height: 0%
+        width: 16%
+        z-index: 3
+        animation: logo2 0.7s forwards 1.6s
 
-    &:after
-      top: auto
-      bottom: 0
-      animation-delay: 2.25s
+    &:nth-of-type(2)
+      &:before
+        bottom: 0
+        left: 44%
+        z-index: 3
+        animation: logo1 0.6s forwards 0.9s
+      
+      &:after
+        content: ''
+        display: block
+        width: 17%
+        height: 105%
+        background: $white
+        opacity: 0.6
+        position: absolute
+        transform: rotate(-38deg)
+        top: -2.5%
+        left: 22.5%
+        z-index: 1
+
+.title
+  background-color: $white
+  color: $blue
+  font-size: rem(14px)
+  font-weight: $font-normal
+  text-transform: uppercase
+  margin: 0 auto auto
+  padding: rem(0 6px)
+  opacity: 0
+  animation: opacity 0.4s 2.1s forwards
+  transform: translateX(-1px)
+  z-index: 3
+  position: relative
+
+  // &:before,
+  // &:after
+  //   content: ''
+  //   display: block
+  //   width: 0%
+  //   height: rem(1px)
+  //   background: $white
+  //   opacity: 0.3
+  //   margin: auto auto 0 0
+  //   animation: width 1s forwards 1.5s
+  //   position: absolute
+  //   top: 0
+  //   left: 50%
+  //   transform: translateX(-50%)
+
+  // &:after
+  //   top: auto
+  //   bottom: 0
+  //   animation-delay: 1.75s
 
 @keyframes logo1
   100%
@@ -159,9 +181,9 @@
   0%
     width: 100%
   57%
-    width: 47%
+    width: 49%
   58%
-    width: 47%
+    width: 49%
   100%
     width: 0%
 
@@ -172,3 +194,7 @@
 @keyframes width
   100%
     width: 100vw
+
+@keyframes height
+  100%
+    height: rem(500px)
