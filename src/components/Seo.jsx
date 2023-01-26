@@ -1,5 +1,5 @@
-import React from 'react'
-import useSiteMetadata from '../hooks/use-site-metadata'
+import React from 'react';
+import useSiteMetadata from '../hooks/use-site-metadata';
 
 function SiteSEO({ title, description, pathname, children }) {
   const { title: defaultTitle, description: defaultDescription, image, siteUrl, twitterUsername } = useSiteMetadata()
@@ -40,4 +40,4 @@ function SiteSEO({ title, description, pathname, children }) {
   )
 }
 
-export default SiteSEO
+export default SiteSEO;

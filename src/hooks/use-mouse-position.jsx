@@ -28,4 +28,4 @@ function useMousePosition() {
   return position;
 }
 
-export default useMousePosition
+export default useMousePosition;

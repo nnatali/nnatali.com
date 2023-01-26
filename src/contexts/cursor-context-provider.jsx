@@ -12,4 +12,4 @@ function CursorContextProvider({ children }) {
   );
 }
 
-export default CursorContextProvider
+export default CursorContextProvider;

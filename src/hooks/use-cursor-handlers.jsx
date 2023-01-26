@@ -52,4 +52,4 @@ function useCursorHandlers(options = {}) {
   return { onMouseEnter, onMouseLeave };
 }
 
-export default useCursorHandlers
+export default useCursorHandlers;

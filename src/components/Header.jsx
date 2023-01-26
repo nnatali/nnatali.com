@@ -1,6 +1,6 @@
-import * as React from 'react'
+import * as React from 'react';
 import useCursorHandlers from '../hooks/use-cursor-handlers';
-import * as styles from './Header.module.sass'
+import * as styles from './Header.module.sass';
 
 function Header({ title, children }) {
   const cursorHandlers = useCursorHandlers();
@@ -16,4 +16,4 @@ function Header({ title, children }) {
   )
 }
 
-export default Header
+export default Header;

@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import isMobile from '../utils/is-mobile';
 import useMousePosition from '../hooks/use-mouse-position';
 import { CursorContext } from '../contexts/cursor-context-provider';
-import * as styles from './Cursor.module.sass'
+import * as styles from './Cursor.module.sass';
 
 function Cursor() {
   
@@ -41,4 +41,4 @@ function Cursor() {
   );
 }
 
-export default Cursor
+export default Cursor;

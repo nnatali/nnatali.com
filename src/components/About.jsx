@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import useCursorHandlers from '../hooks/use-cursor-handlers';
 import isMobile from '../utils/is-mobile';
 import isTablet from '../utils/is-tablet';
-import * as styles from './About.module.sass'
+import * as styles from './About.module.sass';
 
 function About({ children }) {
   
@@ -51,4 +51,4 @@ function About({ children }) {
   )
 }
 
-export default About
+export default About;

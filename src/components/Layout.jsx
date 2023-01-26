@@ -1,10 +1,10 @@
-import * as React from 'react'
-import Nav from '../components/Nav'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Cursor from '../components/Cursor'
+import * as React from 'react';
+import Nav from '../components/Nav';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Cursor from '../components/Cursor';
 import CursorContextProvider from '../contexts/cursor-context-provider';
-import * as styles from './Layout.module.sass'
+import * as styles from './Layout.module.sass';
 
 function Layout({ title, children }) {
 
@@ -22,4 +22,4 @@ function Layout({ title, children }) {
   )
 }
 
-export default Layout
+export default Layout;

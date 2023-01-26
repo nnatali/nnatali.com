@@ -1,5 +1,5 @@
-import * as React from 'react'
-import * as styles from './Footer.module.sass'
+import * as React from 'react';
+import * as styles from './Footer.module.sass';
 
 function Footer({ children }) {
 
@@ -10,4 +10,4 @@ function Footer({ children }) {
   )
 }
 
-export default Footer
+export default Footer;

@@ -1,6 +1,6 @@
-import * as React from 'react'
+import * as React from 'react';
 import useCursorHandlers from '../hooks/use-cursor-handlers';
-import * as styles from './Projects.module.sass'
+import * as styles from './Projects.module.sass';
 
 function Projects({ children }) {
   const cursorHandlers = useCursorHandlers();
@@ -12,4 +12,4 @@ function Projects({ children }) {
   )
 }
 
-export default Projects
+export default Projects;

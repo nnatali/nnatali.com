@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { Script } from 'gatsby'
-import SiteSEO from '../components/Seo'
-import Layout from '../components/Layout'
-import About from '../components/About'
-import Projects from '../components/Projects'
+import * as React from 'react';
+import { Script } from 'gatsby';
+import SiteSEO from '../components/Seo';
+import Layout from '../components/Layout';
+import About from '../components/About';
+import Projects from '../components/Projects';
 
 const IndexPage = () => {
   
@@ -20,4 +20,4 @@ export const Head = () => (
   <SiteSEO />
 )
 
-export default IndexPage
+export default IndexPage;
