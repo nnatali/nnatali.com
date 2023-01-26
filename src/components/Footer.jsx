@@ -1,10 +1,10 @@
 import * as React from 'react';
-import * as styles from './Footer.module.sass';
+import { footer } from './Footer.module.sass';
 
 function Footer({ children }) {
 
   return (
-    <footer className={styles.footer}>
+    <footer className={footer}>
       {children}
     </footer>
   )
