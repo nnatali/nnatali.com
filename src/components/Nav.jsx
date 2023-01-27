@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import * as styles from './Nav.module.sass';
+import * as styles from './nav.module.sass';
 import IconExternal from '../images/icon-external.inline.svg';
 
 function Nav({ children }) {

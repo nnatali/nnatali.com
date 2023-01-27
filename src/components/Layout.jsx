@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Cursor from '../components/Cursor';
 import CursorContextProvider from '../contexts/cursor-context-provider';
-import * as styles from './Layout.module.sass';
+import * as styles from './layout.module.sass';
 
 function Layout({ title, children }) {
 

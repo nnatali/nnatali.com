@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { footer } from './Footer.module.sass';
+import { footer } from './footer.module.sass';
 
 function Footer({ children }) {
 
