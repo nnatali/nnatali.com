@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Nav from '../components/Nav';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Cursor from '../components/Cursor';
@@ -14,9 +13,7 @@ function Layout({ title, children }) {
       <main className={styles.main}>
         {children}
       </main>
-      <Footer>
-        <Nav />
-      </Footer>
+      <Footer />
       <Cursor />
     </CursorContextProvider> 
   )

@@ -31,18 +31,28 @@ function About({ children }) {
     <section ref={sectionRef} data-revert="true" className={styles.about} {...cursorHandlers}>
       <div className={styles.container}>
         <h3 className={styles.title}>
-          Hey there! My name is Natalí. Let’s build something together.
+          Hey there! My name is Natalí.
         </h3>
         <p className={styles.text}>
-          I have 12+ years of front-end development and a serious passion for UI effects, animations and to create intuitive user experiences. I am also a proud little girl mom, and a board games enthusiast.
+          I have 12+ years of front-end development and a serious passion for UI effects, animations and to create intuitive user experiences. I am also a proud little girl mom and a board games enthusiast.
         </p>
         <p className={styles.text}>
-          Want to get in touch? 
-          <a className={styles.link} href="mailto:hola@nnatali.com" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>
-            <span>📬</span> 
-            Drop me a line
-          </a>
+          Sometimes
+          <a className={styles.link} href="https://twitter.com/nnatali" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>I tweet,</a>
+          <a className={styles.link} href="https://instagram.com/nnatali" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>upload photos</a>
+          and time ago 
+          <a className={styles.link} href="https://nnatali.com/blog-personal/" {...cursorHandlers}>wrote a blog.</a>
         </p>
+        <p className={styles.text}>
+          In 
+          <a className={styles.link} href="https://www.linkedin.com/in/nnatali/" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>linkedin</a>
+          you can view my professional career and below some examples of my work.
+        </p>
+        <h4 className={styles.subtitle}>Want let's build something together?
+          <a className={styles.link} href="mailto:hola@nnatali.com" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>
+            Drop me a line.
+          </a>
+        </h4>
         <span ref={circleRef} className={styles.aboutCircle}></span>
         <span ref={meRef} className={styles.aboutMe}></span>
       </div>

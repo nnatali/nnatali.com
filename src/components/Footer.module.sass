@@ -1,4 +1,12 @@
 .footer
-  background-color: darken($blue, 10%)
+  background-color: $black
+  color: $white
   padding: rem(10px)
   text-align: center
+
+.text
+  font-size: rem(14px)
+  font-weight: $font-light
+
+  @include breakpoint('tablet','up')
+    font-size: rem(16px)

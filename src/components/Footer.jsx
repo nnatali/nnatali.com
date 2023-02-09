@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { footer } from './Footer.module.sass';
+import { footer, text } from './Footer.module.sass';
 
-function Footer({ children }) {
-
+function Footer(){
+  const year = new Date().getFullYear();
   return (
     <footer className={footer}>
-      {children}
+      <p className={text}>&copy; {year}. No tracking or ads.</p>
     </footer>
   )
 }

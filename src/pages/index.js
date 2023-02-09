@@ -3,14 +3,14 @@ import { Script } from 'gatsby';
 import SiteSEO from '../components/Seo';
 import Layout from '../components/Layout';
 import About from '../components/About';
-import Projects from '../components/Projects';
+import Portfolio from '../components/Portfolio';
 
 const IndexPage = () => {
   
   return (
     <Layout title="Front-end developer">
       <About />
-      <Projects />
+      <Portfolio />
       <Script id="script-lines-id" strategy="idle" src="/scripts/lines.js" />
     </Layout>
   )

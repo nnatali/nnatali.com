@@ -6,8 +6,38 @@
   background-color: $blue
   z-index: 10
 
-  @include breakpoint('mobile','up')
+  @include breakpoint('tablet','up')
     height: rem(800px)
+
+  &:before
+    @include breakpoint('tablet','down')
+      content: ''
+      display: block
+      width: 0%
+      height: rem(109px)
+      border-top: rem(1px) solid $white
+      border-bottom: rem(1px) solid $white
+      opacity: 0.3
+      margin: auto auto 0 0
+      animation: width 1s forwards 0.3s
+      position: absolute
+      top: rem(175px)
+      left: 0
+
+  &:after
+    @include breakpoint('tablet','down')
+      content: ''
+      display: block
+      width: 0%
+      height: rem(1px)
+      background: $white
+      opacity: 0.3
+      margin: auto auto 0 0
+      animation: width 1s forwards 0.3s
+      position: absolute
+      top: rem(263px)
+      right: 0
+      animation-delay: 1.5s
 
   canvas
     position: absolute
@@ -18,40 +48,9 @@
     left: 0
     z-index: 1
     animation: height 0.5s 1.8s forwards
-  
-  // &:before
-  //   content: ''
-  //   display: block
-  //   width: 0%
-  //   height: rem(109px)
-  //   border-top: rem(1px) solid $white
-  //   border-bottom: rem(1px) solid $white
-  //   opacity: 0.3
-  //   margin: auto auto 0 0
-  //   animation: width 1s forwards 0.3s
-  //   position: absolute
-  //   top: rem(174px)
-  //   left: 0
 
-  //   @include breakpoint('mobile','up')
-  //     top: rem(324px)
-
-  // &:after
-  //   content: ''
-  //   display: block
-  //   width: 0%
-  //   height: rem(1px)
-  //   background: $white
-  //   opacity: 0.3
-  //   margin: auto auto 0 0
-  //   animation: width 1s forwards 0.3s
-  //   position: absolute
-  //   top: rem(262px)
-  //   right: 0
-  //   animation-delay: 1.5s
-
-  //   @include breakpoint('mobile','up')
-  //     top: rem(412px)
+    @include breakpoint('tablet','down')
+      display: none
 
 .logo
   display: block
@@ -149,25 +148,27 @@
   z-index: 3
   position: relative
 
-  // &:before,
-  // &:after
-  //   content: ''
-  //   display: block
-  //   width: 0%
-  //   height: rem(1px)
-  //   background: $white
-  //   opacity: 0.3
-  //   margin: auto auto 0 0
-  //   animation: width 1s forwards 1.5s
-  //   position: absolute
-  //   top: 0
-  //   left: 50%
-  //   transform: translateX(-50%)
+  &:before,
+  &:after
+    @include breakpoint('tablet','down')
+      content: ''
+      display: block
+      width: 0%
+      height: rem(1px)
+      background: $white
+      opacity: 0.3
+      margin: auto auto 0 0
+      animation: width 1s forwards 1.5s
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
 
-  // &:after
-  //   top: auto
-  //   bottom: 0
-  //   animation-delay: 1.75s
+  &:after
+    @include breakpoint('tablet','down')
+      top: auto
+      bottom: 0
+      animation-delay: 1.75s
 
 @keyframes logo1
   100%

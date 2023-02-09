@@ -41,7 +41,6 @@ var Nodes = {
     this.context.lineJoin = 'bevel';
     this.canvas.width = window.innerWidth;
     this.canvas.height = 500;
-    this.canvas.style.display = 'block';
     this.canvas.style.background = '#0282CC';
     this.canvas.addEventListener('mousemove', this.mouseMove, false);
     this.canvas.addEventListener('mousedown', this.mouseDown, false);
