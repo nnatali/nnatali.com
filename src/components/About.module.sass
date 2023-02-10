@@ -26,13 +26,13 @@
     padding-left: 0
     padding-right: 0
   
-.about-circle
-  content: ''
+.circle
   display: block
   width: rem(250px) 
   height: rem(250px)
   background-color: $green
   border-radius: 100%
+  overflow: hidden
   position: absolute
   z-index: 1
   bottom: 5%
@@ -49,18 +49,19 @@
     bottom: auto
     left: auto
   
-.about-me
-  content: ''
+.me
   display: block
   width: rem(250px) 
   height: rem(250px)
-  background-image: url(../images/circle-me.png)
-  background-repeat: no-repeat
-  background-size: contain
-  background-position: center
   margin: rem(50px) auto 0
+  border-radius: 100%
+  overflow: hidden
   position: relative
   z-index: 2
+
+  img
+    display: block
+    width: 100%
 
   @include breakpoint('tablet','up')
     width: rem(350px) 
@@ -111,6 +112,7 @@
 
 .link
   background-color: $green
+  border-radius: rem(3px)
   text-decoration: none
   padding: rem(2px 4px)
   margin-left: rem(4px)

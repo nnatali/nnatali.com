@@ -1,16 +1,19 @@
-import * as React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Script } from 'gatsby';
 import SiteSEO from '../components/Seo';
 import Layout from '../components/Layout';
 import About from '../components/About';
-import Portfolio from '../components/Portfolio';
+
+const Portfolio = lazy(() => import('../components/Portfolio'));
 
 const IndexPage = () => {
   
   return (
     <Layout title="Front-end developer">
       <About />
-      <Portfolio />
+      <Suspense>
+        <Portfolio />
+      </Suspense>
       <Script id="script-lines-id" strategy="idle" src="/scripts/lines.js" />
     </Layout>
   )

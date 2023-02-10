@@ -18,26 +18,29 @@ function Portfolio() {
   let mediaElement;
 
   function playVideo(event){
-    mediaElement = event.target;
-    if (event.target.nodeName === 'ARTICLE'){
-      mediaElement = event.target.querySelectorAll('video')[0];
-    } else {
-      mediaElement = event.target.parentNode.closest('article').querySelectorAll('video')[0];
-    }
-    mediaElement.currentTime = pauseTime;
-    mediaElement.play();
+    // mediaElement = event.target;
+    // if (event.target.nodeName === 'ARTICLE'){
+    //   mediaElement = event.target.querySelectorAll('video')[0];
+    // } else {
+    //   mediaElement = event.target.parentNode.closest('article').querySelectorAll('video')[0];
+    // }
+    // mediaElement.currentTime = pauseTime;
+    // var isPlaying = mediaElement.currentTime > 0 && !mediaElement.paused && !mediaElement.ended && mediaElement.readyState > mediaElement.HAVE_CURRENT_DATA;
+    // if (!isPlaying) {
+    //   mediaElement.play();
+    // }
   }
   
   function stopVideo(event){
-    if (event.target.nodeName === 'VIDEO'){
-      mediaElement = event.target;      
-    } else if (event.target.nodeName === 'ARTICLE'){
-      mediaElement = event.target.querySelectorAll('video')[0];
-    } else {
-      mediaElement = event.target.parentNode.closest('article').querySelectorAll('video')[0];
-    }
-    pauseTime = mediaElement.currentTime;
-    mediaElement.load();
+    // if (event.target.nodeName === 'VIDEO'){
+    //   mediaElement = event.target;      
+    // } else if (event.target.nodeName === 'ARTICLE'){
+    //   mediaElement = event.target.querySelectorAll('video')[0];
+    // } else {
+    //   mediaElement = event.target.parentNode.closest('article').querySelectorAll('video')[0];
+    // }
+    // pauseTime = mediaElement.currentTime;
+    // mediaElement.load();
   }
 
   const data = useStaticQuery(graphql`
