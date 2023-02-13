@@ -9,7 +9,7 @@ module.exports = {
     twitterUsername: `@nnatali`,
     image: `${__dirname}/images/site-image.png`,
   },
-  plugins: [`gatsby-plugin-image`, `gatsby-plugin-sharp`, `gatsby-transformer-sharp`, `gatsby-plugin-mdx`,
+  plugins: [`gatsby-plugin-image`, `gatsby-plugin-sharp`, `gatsby-transformer-sharp`, `gatsby-plugin-mdx`, `gatsby-plugin-minify`,
   {
     resolve: `gatsby-plugin-sass`,
     options: {
@@ -30,14 +30,14 @@ module.exports = {
       path: `${__dirname}/content/portfolio`,
     },
   },
-  {
-    resolve: `gatsby-plugin-prettier-build`,
-    options: {
-      types: ['html'],
-      concurrency: 20,
-      verbose: true
-    }
-  },
+  // {
+  //   resolve: `gatsby-plugin-prettier-build`,
+  //   options: {
+  //     types: ['html'],
+  //     concurrency: 20,
+  //     verbose: true
+  //   }
+  // },
   {
     resolve: `gatsby-transformer-remark`,
     options: {
