@@ -25,17 +25,21 @@ function Cursor() {
     return null;
   }
   
+  let cursorClass = styles.cursor;
+  if (cursor.active) {
+    cursorClass += ' '+styles.active;
+  }
+  if (cursor.revert) {
+    cursorClass += ' '+styles.revert;
+  }
+
   return (
     <div 
-      className={styles.cursor}
+      className={cursorClass}
       style={{ 
         left: clientX,
         top: clientY,
-        width: cursor.active ? '50px' : '15px',
-        height: cursor.active ? '50px' : '15px',
-        display: isVisible && clientX > 1 ? 'block' : 'none',
-        opacity: cursor.active ? '0.5' : '1',
-        background: cursor.revert ? '#0282CC' : '#C5D86D',
+        display: isVisible && clientX > 1 ? 'block' : 'none'
       }}
     />
   );

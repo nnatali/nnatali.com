@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import useCursorHandlers from '../hooks/use-cursor-handlers';
 import {
@@ -7,7 +7,7 @@ import {
   grid,
   video,
   name,
-  list,
+  text,
   description
 } from './Portfolio.module.sass';
 
@@ -73,18 +73,13 @@ function Portfolio() {
             </video>
             <div className={description}>
               <h3 className={name}><a href={edge.node.frontmatter.link} title="Visit website" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>{edge.node.frontmatter.title}</a></h3>
-              <dl className={list}>
-                <dt>Result:</dt>
-                <dd>{edge.node.body}</dd>
-                <dt>Year:</dt>
-                <dd>{edge.node.frontmatter.date}</dd>
-                { edge.node.frontmatter.awards ? (
-                  <>
-                    <dt>Awards:</dt>
-                    <dd><a href={edge.node.frontmatter.awards_link} title="View award" {...cursorHandlers}>{edge.node.frontmatter.awards}</a></dd>
-                  </>
-                ) : ( null ) }
-              </dl>
+              <p className={text}>{edge.node.body}</p>
+              { edge.node.frontmatter.awards ? (
+                <>
+                  <p className={text}><a href={edge.node.frontmatter.awards_link} title="View award" {...cursorHandlers}>{edge.node.frontmatter.awards}</a></p>
+                </>
+              ) : ( null ) }
+              <p className={text}>{edge.node.frontmatter.date}</p>
             </div>
           </article>
         ))

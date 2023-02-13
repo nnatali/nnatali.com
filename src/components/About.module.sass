@@ -111,23 +111,17 @@
       margin-bottom: rem(35px)
 
 .link
-  background-color: $green
-  border-radius: rem(3px)
-  text-decoration: none
-  padding: rem(2px 4px)
+  @include link(lighten($green, 10%))
+  color: $black
   margin-left: rem(4px)
   margin-right: rem(4px)
-  color: $black
   font-size: rem(16px)
   line-height: 1
   font-weight: $font-light
   position: relative
   overflow: hidden
-  display: inline-block
-  vertical-align: middle
   transition: all 0.5s ease
-  margin-top: rem(-3px)
-
+  
   @include breakpoint('tablet','up')
     font-size: rem(19px)
 

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { footer, text } from './Footer.module.sass';
 
 function Footer(){

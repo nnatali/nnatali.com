@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import useCursorHandlers from '../hooks/use-cursor-handlers';
 import * as styles from './Header.module.sass';
 

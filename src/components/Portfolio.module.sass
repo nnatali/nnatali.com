@@ -16,27 +16,23 @@
 
 .grid 
   display: flex
-  flex-direction: row
+  flex-direction: column
   flex-wrap: wrap
-  justify-content: space-between
+  justify-content: center
   width: 100%
   max-width: $max-width*1.5
   margin-left: auto
   margin-right: auto
 
-  @include breakpoint('mobile','up')
-    flex-direction: column
-
-  @include breakpoint('desktop-lg','up')
+  @include breakpoint('tablet','up')
     flex-direction: row
 
 .item 
   width: 100%
   max-width: rem(475px)
-  margin: 0 auto rem(30px)
+  margin: 0 auto rem(50px)
   color: $white
-  background-color: $black
-  border-radius: rem(3px)
+  background-color: $white
   overflow: hidden
   padding: rem(0px)
   position: relative
@@ -46,37 +42,32 @@
   transition: transform 500ms ease
 
   @include breakpoint('tablet','up')
-    flex-direction: row
-    margin-bottom: rem(60px)
-    max-width: rem(1100px)
+    width: calc(50% - 80px)
+    margin-left: rem(40px)
+    margin-right: rem(40px)
+    margin-bottom: rem(80px)
     
   @include breakpoint('desktop-lg','up')
-    width: calc(50% - 30px)
-    margin-left: 0
-    margin-right: 0
+    width: calc(33.33% - 80px)
     
 .name
-  font-size: rem(15px)
+  font-size: rem(16px)
   line-height: 1.2
   font-weight: $font-normal
-  margin-bottom: rem(20px)
+  
+  @include breakpoint('tablet','up')
+    font-size: rem(20px)
   
   a 
-    text-decoration: none
-    background-color: $white
-    border-radius: rem(3px)
-    text-decoration: none
-    padding: rem(4px 4px)
+    @include link(lighten($blue, 45%))
     color: $black
 
 .description
   width: 100%
   padding: rem(25px 40px 20px 20px)
-  // transform: translateX(-100%)
   transition: all 500ms ease
-
+  
   @include breakpoint('tablet','up')
-    width: 40%
     padding: rem(40px)
 
   @include breakpoint('desktop-lg','up')
@@ -89,37 +80,23 @@
   position: relative
   z-index: 2
   transition: transform 500ms ease
+  margin-bottom: rem(10px)
+  border-bottom: rem(10px) solid $blue
 
-  @include breakpoint('tablet','up')
-    width: 60%
-
-.list
-  display: flex
-  flex-direction: row
-  flex-wrap: wrap
+.text
+  color: $black
   font-size: rem(14px)
   font-weight: $font-light
-  letter-spacing: 0.3px
   line-height: 1.3
   word-break: break-word
+  margin-top: rem(10px)
+
+  @include breakpoint('tablet','up')
+    font-size: rem(16px)
 
   a 
-    color: $white
-    text-decoration: none
-
-  dt
-    display: block
-    margin: 0
-    padding: 0
-    width: rem(70px)
-    margin-bottom: rem(10px)
-  
-  dd
-    display: block
-    margin: 0
-    padding: 0
-    width: calc(100% - 70px)
-    margin-bottom: rem(10px)
+    //@include link(lighten($blue, 45%))
+    color: $black
 
 @keyframes opacity
   100%
