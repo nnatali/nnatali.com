@@ -13,34 +13,32 @@ import {
 
 function Portfolio() {
 
+  const videoClasses = video + ' lazyload';
   const cursorHandlers = useCursorHandlers();
   let pauseTime = 0;
   let mediaElement;
 
   function playVideo(event){
-    // mediaElement = event.target;
-    // if (event.target.nodeName === 'ARTICLE'){
-    //   mediaElement = event.target.querySelectorAll('video')[0];
-    // } else {
-    //   mediaElement = event.target.parentNode.closest('article').querySelectorAll('video')[0];
-    // }
-    // mediaElement.currentTime = pauseTime;
-    // var isPlaying = mediaElement.currentTime > 0 && !mediaElement.paused && !mediaElement.ended && mediaElement.readyState > mediaElement.HAVE_CURRENT_DATA;
-    // if (!isPlaying) {
-    //   mediaElement.play();
-    // }
+    mediaElement = event.target;
+    if (event.target.nodeName === 'ARTICLE'){
+      mediaElement = event.target.querySelectorAll('video')[0];
+    } else {
+      mediaElement = event.target.parentNode.closest('article').querySelectorAll('video')[0];
+    }
+    mediaElement.currentTime = pauseTime;
+    var isPlaying = mediaElement.currentTime > 0 && !mediaElement.paused && !mediaElement.ended && mediaElement.readyState > mediaElement.HAVE_CURRENT_DATA;
+    if (!isPlaying) {
+      mediaElement.play();
+    }
   }
   
-  function stopVideo(event){
-    // if (event.target.nodeName === 'VIDEO'){
-    //   mediaElement = event.target;      
-    // } else if (event.target.nodeName === 'ARTICLE'){
-    //   mediaElement = event.target.querySelectorAll('video')[0];
-    // } else {
-    //   mediaElement = event.target.parentNode.closest('article').querySelectorAll('video')[0];
-    // }
-    // pauseTime = mediaElement.currentTime;
-    // mediaElement.load();
+  function stopVideo(){
+    document.querySelectorAll('video').forEach(function(video){
+      var isPlaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > video.HAVE_CURRENT_DATA;
+      if (isPlaying) {
+        video.pause();
+      }
+    })
   }
 
   const data = useStaticQuery(graphql`
@@ -63,14 +61,14 @@ function Portfolio() {
       }
     }
   `);
-
+  
   return (
     <section className={portfolio} {...cursorHandlers}>
       <div className={grid}>
       {
         data.allMdx.edges.map((edge, index) => (
           <article key={edge.node.id} id={index} className={item} onMouseEnter={playVideo} onMouseLeave={stopVideo} role="presentation">
-            <video playsInline muted loop className={video} poster={edge.node.frontmatter.media + ".jpg"}>
+            <video className={videoClasses} preload="none" playsInline muted loop poster={edge.node.frontmatter.media + ".webp"}>
               <source src={edge.node.frontmatter.media + ".mp4"} type="video/mp4" />
             </video>
             <div className={description}>

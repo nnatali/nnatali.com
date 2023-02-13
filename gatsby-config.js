@@ -48,6 +48,7 @@ module.exports = {
             maxWidth: 1140,
           },
         },
+        `gatsby-remark-lazy-load`,
         {
           resolve: `gatsby-remark-prismjs`,
           options: {
