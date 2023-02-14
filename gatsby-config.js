@@ -71,5 +71,18 @@ module.exports = {
         }
     }
   },
-]
+  {
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      name: `Nelly Natali - Front-end developer`,
+      short_name: `NNatali`,
+      icon: `src/images/app.png`,
+      start_url: `/`,
+      background_color: `#0282CC`,
+      theme_color: `#0282CC`,
+      display: `minimal-ui`,
+    },
+  },
+  `gatsby-plugin-offline`
+  ]
 };
