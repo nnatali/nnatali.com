@@ -76,13 +76,25 @@ module.exports = {
     options: {
       name: `Nelly Natali - Front-end developer`,
       short_name: `NNatali`,
+      description: `Hey there! My name is Natalí and I am a front-end developer. Let's build something together.`,
       icon: `src/images/app.png`,
+      icon_options: {
+        purpose: `any maskable`,
+      },
       start_url: `/`,
       background_color: `#0282CC`,
       theme_color: `#0282CC`,
       display: `minimal-ui`,
+      orientation: `natural`
     },
   },
-  `gatsby-plugin-offline`
+  {
+    resolve: `gatsby-plugin-offline`,
+    options: {
+      workboxConfig: {
+        globPatterns: [`**/*.{js,webp,mp4,html,css}`]
+      }
+    },
+  },
   ]
 };
