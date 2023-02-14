@@ -92,7 +92,12 @@ module.exports = {
     resolve: `gatsby-plugin-offline`,
     options: {
       workboxConfig: {
-        globPatterns: [`**/*.{js,webp,mp4,html,css}`]
+        runtimeCaching: [
+          {
+            urlPattern: /(\.js$|\.css$|\.webp$|\.mp4$\/)/,
+            handler: `CacheFirst`,
+          },
+        ]
       }
     },
   },
