@@ -53,7 +53,8 @@ function Portfolio() {
               link
               awards
               awards_link
-              media
+              image
+              video
             }
             id
           }
@@ -68,8 +69,8 @@ function Portfolio() {
       {
         data.allMdx.edges.map((edge, index) => (
           <article key={edge.node.id} id={index} className={item} onMouseEnter={playVideo} onMouseLeave={stopVideo} role="presentation">
-            <video className={videoClasses} preload="none" playsInline muted loop poster={edge.node.frontmatter.media + ".webp"}>
-              <source src={edge.node.frontmatter.media + ".mp4"} type="video/mp4" />
+            <video className={videoClasses} preload="none" playsInline muted loop poster={edge.node.frontmatter.image}>
+              <source src={edge.node.frontmatter.video} type="video/mp4" />
             </video>
             <div className={description}>
               <h3 className={name}><a href={edge.node.frontmatter.link} title="Visit website" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>{edge.node.frontmatter.title}</a></h3>
@@ -79,7 +80,13 @@ function Portfolio() {
                   <p className={text}><a href={edge.node.frontmatter.awards_link} title="View award" {...cursorHandlers}>{edge.node.frontmatter.awards}</a></p>
                 </>
               ) : ( null ) }
-              <p className={text}>{edge.node.frontmatter.date}</p>
+              { edge.node.frontmatter.title === 'Newsletters' || edge.node.frontmatter.title === 'Iberdrola' ? ( 
+                null
+              ) : ( 
+                <>
+                  <p className={text}>{edge.node.frontmatter.date}</p>
+                </>  
+              ) }
             </div>
           </article>
         ))
