@@ -69,8 +69,8 @@ function Portfolio() {
       {
         data.allMdx.edges.map((edge, index) => (
           <article key={edge.node.id} id={index} className={item} onMouseEnter={playVideo} onMouseLeave={stopVideo} role="presentation">
-            <video className={videoClasses} preload="none" playsInline muted loop poster={edge.node.frontmatter.image}>
-              <source src={edge.node.frontmatter.video} type="video/mp4" />
+            <video className={videoClasses} preload="none" playsInline muted loop poster={edge.node.frontmatter.image+".webp"}>
+              <source src={edge.node.frontmatter.video+".mp4"} type="video/mp4" />
             </video>
             <div className={description}>
               <h3 className={name}><a href={edge.node.frontmatter.link} title="Visit website" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>{edge.node.frontmatter.title}</a></h3>
