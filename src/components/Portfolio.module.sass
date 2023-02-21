@@ -18,7 +18,7 @@
   display: flex
   flex-direction: column
   flex-wrap: wrap
-  justify-content: center
+  justify-content: flex-start
   width: 100%
   max-width: $max-width*1.5
   margin-left: auto
@@ -47,7 +47,7 @@
     margin-right: rem(40px)
     margin-bottom: rem(80px)
     
-  @include breakpoint('desktop-lg','up')
+  @include breakpoint('desktop','up')
     width: calc(33.33% - 80px)
     
 .name
@@ -56,7 +56,7 @@
   font-weight: $font-normal
   
   @include breakpoint('tablet','up')
-    font-size: rem(20px)
+    font-size: rem(18px)
   
   a 
     @include link(lighten($blue, 45%))
@@ -64,15 +64,10 @@
 
 .description
   width: 100%
-  padding: rem(25px 40px 20px 20px)
-  transition: all 500ms ease
-  
-  @include breakpoint('tablet','up')
-    padding: rem(40px)
-
-  @include breakpoint('desktop-lg','up')
-    padding: rem(25px 40px 20px 20px)
-
+  height: 100%
+  padding: rem(20px)
+  display: flex
+  flex-direction: column
   
 .video
   width: 100%
@@ -80,8 +75,7 @@
   position: relative
   z-index: 2
   transition: transform 500ms ease
-  margin-bottom: rem(10px)
-  border-bottom: rem(10px) solid $blue
+  border-bottom: rem(5px) solid $blue
 
 .text
   color: $black
@@ -90,13 +84,26 @@
   line-height: 1.3
   word-break: break-word
   margin-top: rem(10px)
+  margin-bottom: rem(20px)
 
   @include breakpoint('tablet','up')
     font-size: rem(16px)
 
-  a 
-    //@include link(lighten($blue, 45%))
-    color: $black
+.adward 
+  color: $black
+  font-size: rem(12px)
+  font-weight: $font-normal
+  line-height: 1.3
+  word-break: break-word
+  margin-top: auto
+  display: flex
+  flex-direction: row
+  align-items: center
+
+  img 
+    max-width: rem(20px)
+    height: auto
+    margin-right: rem(5px)
 
 @keyframes opacity
   100%

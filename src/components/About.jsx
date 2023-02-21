@@ -44,21 +44,20 @@ function About({ children }) {
           Hey there! My name is Natalí.
         </h3>
         <p className={text}>
-          I have 12+ years of front-end development and a serious passion for UI effects, animations and to create intuitive user experiences. I am also a proud little girl mom and a board games enthusiast.
+          I have 12+ years of front-end development and a serious passion for UI effects, animations and intuitive user experiences.
         </p>
         <p className={text}>
+          I am also a proud mom of a little girl and a board game enthusiast.
           Sometimes
-          <a className={link} href="https://twitter.com/nnatali" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>I tweet,</a>
-          <a className={link} href="https://instagram.com/nnatali" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>upload photos</a>
-          and time ago 
-          <a className={link} href="https://nnatali.com/blog-personal/" {...cursorHandlers}>wrote a blog.</a>
+          <a className={link} href="https://twitter.com/nnatali" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>I tweet</a>
+          and
+          <a className={link} href="https://instagram.com/nnatali" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>upload photos.</a>
         </p>
         <p className={text}>
-          In 
-          <a className={link} href="https://www.linkedin.com/in/nnatali/" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>linkedin</a>
-          you can view my professional career and below some examples of my work.
+          Scroll down to have a look at some examples of my work, and you can also find me on 
+          <a className={link} href="https://www.linkedin.com/in/nnatali/" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>linkedin!</a>
         </p>
-        <h4 className={subtitle}>Want let's build something together?
+        <h4 className={subtitle}>Let´s build something together!
           <a className={link} href="mailto:hola@nnatali.com" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>
             Drop me a line.
           </a>
