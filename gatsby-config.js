@@ -38,7 +38,7 @@ module.exports = {
         removeHashes: false,
         removeArtifacts: false,
         noJsMap: false,
-        removeInlineStyles: false,
+        removeInlineStyles: true,
         jsDir: `scripts`,
         cssDir: `styles`
     }
