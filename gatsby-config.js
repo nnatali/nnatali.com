@@ -30,14 +30,19 @@ module.exports = {
       path: `${__dirname}/content/portfolio`,
     },
   },
-  // {
-  //   resolve: `gatsby-plugin-prettier-build`,
-  //   options: {
-  //     types: ['html'],
-  //     concurrency: 20,
-  //     verbose: true
-  //   }
-  // },
+  {
+    resolve: `gatsby-plugin-tidy`,
+    options: {
+        cleanPublic: true,
+        cleanCache: true,
+        removeHashes: true,
+        removeArtifacts: true,
+        noJsMap: true,
+        removeInlineStyles: true,
+        jsDir: `scripts`,
+        cssDir: `styles`
+    }
+  },
   {
     resolve: `gatsby-transformer-remark`,
     options: {
@@ -64,14 +69,6 @@ module.exports = {
     },
   },
   {
-    resolve: `gatsby-plugin-svgr-loader`,
-    options: {
-        rule: {
-          include: /\.inline\.svg$/
-        }
-    }
-  },
-  {
     resolve: `gatsby-plugin-manifest`,
     options: {
       name: `Nelly Natali - Front-end developer`,
@@ -96,10 +93,10 @@ module.exports = {
           {
             urlPattern: /(\.js$|\.css$|\.webp$|\.mp4$\/)/,
             handler: `CacheFirst`,
-          },
+          }
         ]
       }
     },
-  },
+  }
   ]
 };
