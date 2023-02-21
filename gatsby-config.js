@@ -33,12 +33,12 @@ module.exports = {
   {
     resolve: `gatsby-plugin-tidy`,
     options: {
-        cleanPublic: true,
-        cleanCache: true,
-        removeHashes: true,
+        cleanPublic: false,
+        cleanCache: false,
+        removeHashes: false,
         removeArtifacts: false,
-        noJsMap: true,
-        removeInlineStyles: true,
+        noJsMap: false,
+        removeInlineStyles: false,
         jsDir: `scripts`,
         cssDir: `styles`
     }
