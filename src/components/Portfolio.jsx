@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import useCursorHandlers from '../hooks/use-cursor-handlers';
+import isMobile from '../utils/is-mobile';
 import {
   portfolio,
   item,
@@ -17,13 +18,13 @@ function Portfolio() {
   const cursorHandlers = useCursorHandlers();
   let pauseTime = 0;
   let mediaElement;
-
+  
   function playVideo(event){
     mediaElement = event.target;
-    if (event.target.nodeName === 'ARTICLE'){
-      mediaElement = event.target.querySelectorAll('video')[0];
+    if (mediaElement.nodeName === 'ARTICLE'){
+      mediaElement = mediaElement.querySelectorAll('video')[0];
     } else {
-      mediaElement = event.target.parentNode.closest('article').querySelectorAll('video')[0];
+      mediaElement = mediaElement.parentNode.closest('article').querySelectorAll('video')[0];
     }
     mediaElement.currentTime = pauseTime;
     var isPlaying = mediaElement.currentTime > 0 && !mediaElement.paused && !mediaElement.ended && mediaElement.readyState > mediaElement.HAVE_CURRENT_DATA;
@@ -38,8 +39,33 @@ function Portfolio() {
       if (isPlaying) {
         video.pause();
       }
-    })
+    });
   }
+
+  const itemRefs = useRef([]);
+    
+  function scrolleable(){
+    if (isMobile) {
+      for (var key in itemRefs.current) {
+        var item = itemRefs.current[key].querySelectorAll('video')[0];
+        if (item.classList.contains('lazyloaded')){
+          const itemPosition = item.getBoundingClientRect().top;
+          if (itemPosition < (window.innerHeight * 0.5) && itemPosition > 0 ) {
+            if (item.paused){
+              item.play();
+            }
+          } else {
+            item.pause();
+          }
+        }
+      }
+    }
+  } 
+
+  useEffect(() => {
+    window.addEventListener('scroll', scrolleable);
+    return () => window.removeEventListener('scroll', scrolleable);
+  }, []);
 
   const data = useStaticQuery(graphql`
     query MyQueryPortfolio {
@@ -68,7 +94,15 @@ function Portfolio() {
       <div className={grid}>
       {
         data.allMdx.edges.map((edge, index) => (
-          <article key={edge.node.id} id={index} className={item} onMouseEnter={playVideo} onMouseLeave={stopVideo} role="presentation">
+          <article
+            ref={(element) => itemRefs.current[index] = element}
+            key={edge.node.id}
+            id={index}
+            className={item}
+            onMouseEnter={playVideo}
+            onMouseLeave={stopVideo}
+            role="presentation"
+          >
             <video className={videoClasses} preload="none" playsInline muted loop poster={edge.node.frontmatter.image+".webp"}>
               <source src={edge.node.frontmatter.video+".mp4"} type="video/mp4" />
             </video>
