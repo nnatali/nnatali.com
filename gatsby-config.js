@@ -37,7 +37,7 @@ module.exports = {
         cleanCache: false,
         removeHashes: false,
         removeArtifacts: false,
-        noJsMap: false,
+        noJsMap: true,
         removeInlineStyles: true,
         jsDir: `scripts`,
         cssDir: `styles`
