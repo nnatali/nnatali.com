@@ -14,7 +14,7 @@ function SiteSEO({ title, description, pathname, children }) {
 
   return (
     <>
-      <title>{defaultTitle} | {seo.title}</title>
+      <title>{defaultTitle}</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta name="twitter:card" content="summary_large_image" />
@@ -31,7 +31,7 @@ function SiteSEO({ title, description, pathname, children }) {
           "@type": "Organization",
           "url": "${seo.url}",
           "logo": "${seo.image}",
-          "name" : "${defaultTitle} | ${seo.title}"
+          "name" : "${defaultTitle}"
         }
       `}
       </script>
