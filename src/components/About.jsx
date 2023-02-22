@@ -51,7 +51,7 @@ function About({ children }) {
           Sometimes I enjoy 
           <a className={link} href="https://twitter.com/nnatali" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>tweeting</a>
           and 
-          <a className={link} href="https://instagram.com/nnatali" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>showing photos.</a>
+          <a className={link} href="https://instagram.com/nnatali" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>uploading photos.</a>
         </p>
         <p className={text}>
           Scroll down to have a look at some examples of my work, and you can also find me on 

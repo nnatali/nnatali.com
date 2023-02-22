@@ -12,7 +12,7 @@ function Dory({ children }) {
   return (
     <section className={dory}>
       <div className={container}>
-      <StaticImage className={image} src="../images/dory.png" alt="It's Dory" />
+      <StaticImage className={image} src="../images/dory.png" width="30" height="28" alt="It's Dory" />
         <p className={text}>
           “Just keep swimming. Just keep swimming, swimming, swimming. What do we do? We swim, swim.”
         </p>
