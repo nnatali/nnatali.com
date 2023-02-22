@@ -48,10 +48,10 @@ function About({ children }) {
         </p>
         <p className={text}>
           I am also a proud mom of a little girl and a board game enthusiast.
-          Sometimes
-          <a className={link} href="https://twitter.com/nnatali" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>I tweet</a>
-          and
-          <a className={link} href="https://instagram.com/nnatali" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>upload photos.</a>
+          Sometimes I enjoy 
+          <a className={link} href="https://twitter.com/nnatali" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>tweeting</a>
+          and 
+          <a className={link} href="https://instagram.com/nnatali" target="_blank" rel="noopener noreferrer" {...cursorHandlers}>showing photos.</a>
         </p>
         <p className={text}>
           Scroll down to have a look at some examples of my work, and you can also find me on 
