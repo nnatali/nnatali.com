@@ -63,7 +63,7 @@ function About({ children }) {
           </a>
         </h4>
         <span ref={circleRef} className={circle}></span>
-        <div ref={meRef} className={me}><StaticImage src="../images/circle-me.png" alt="It's me" /></div>
+        <div ref={meRef} className={me}><StaticImage src="../images/nnatali.jpg" alt="It's me" /></div>
       </div>
       {children}
     </section>
