@@ -1,0 +1,41 @@
+@mixin m(){
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin t(){
+    @media (min-width: 768px){
+        @content;
+    }
+}
+
+@mixin no-d(){
+    @media (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin d(){
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin no-dl(){
+    @media (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin dl(){
+    @media (min-width: 1200px){
+        @content;
+    }
+}
+
+@mixin dxl(){
+    @media (min-width: 1400px){
+        @content;
+    }
+}

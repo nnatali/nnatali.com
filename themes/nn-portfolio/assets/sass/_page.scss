@@ -1,0 +1,135 @@
+.nn-page {
+    padding: 78px 24px;
+
+    @include d {
+        padding: 200px 48px;
+    }
+
+    .is-layout-constrained,
+    .is-layout-flow {
+        max-width: 800px !important;
+    }
+
+    .wp-block-post-title {
+        font-size: 24px;
+		line-height: 1.25;
+		font-weight: 500;
+		text-align: left;
+		margin-bottom: 24px;
+
+		@include d {
+			font-size: 38px;
+			margin-bottom: 36px;
+		}
+
+        a {
+            color: var(--black);
+            cursor: default;
+            pointer-events: none;
+        }
+    }
+
+    .wp-block-heading,
+    #cmplz-document .wp-block-heading {
+        font-size: 18px;
+		line-height: 1.25;
+		font-weight: 500;
+		text-align: left;
+		margin-bottom: 12px;
+
+		@include d {
+			font-size: 20px;
+			margin-bottom: 24px;
+		}
+    }
+
+    p,
+    #cmplz-document p,
+    #cmplz-document > ul > li,
+    #cmplz-document > ol > li,
+    .cmplz_datarequest,
+    #cmplz-datarequest-form label {
+        font-size: 16px;
+		line-height: 1.25;
+		font-weight: 200;
+		text-align: left;
+		margin-bottom: 12px;
+
+		@include d {
+			font-size: 18px;
+			margin-bottom: 24px;
+		}
+
+		a {
+			color: currentColor;
+			text-decoration: none;
+			background-image: linear-gradient(180deg,transparent 45%,var(--blue-lighter) 0, var(--blue-lighter) 100%,transparent 0);
+			border-bottom: 1px solid transparent;
+			transition: all 0.25s;
+
+			&:hover {
+				border-color: var(--blue);
+			}
+
+			&:focus,
+			&:active,
+			&:focus-visible {
+				background-image: linear-gradient(180deg,transparent 45%,var(--purple-lighter) 0, var(--purple-lighter) 100%,transparent 0);
+			}
+		}
+    }
+
+    #cmplz-document .cmplz_datarequest,
+    #cmplz-document > ol > li,
+    #cmplz-document > ul > li {
+        margin-bottom: 4px;
+
+        @include d {
+            margin-bottom: 4px;
+        }
+    }
+
+    #cmplz-document > ol > li {
+        list-style-position: inside;
+    }
+
+    #cmplz-datarequest-form > div {
+        margin-bottom: 12px;
+    }
+
+    #cmplz-datarequest-form input[type="text"],
+    #cmplz-datarequest-form input[type="email"] {
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1px;
+        border: none;
+        border: 1px solid var(--almost-black);
+        border-radius: 4px;
+    }
+
+    #cmplz-datarequest-submit {
+        background-color: var(--blue-darker);
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--white);
+        border-radius: 4px;
+        padding: 12px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.25s;
+        margin-top: 12px;
+
+        &:focus,
+        &:active,
+        &:focus-visible {
+            background-color: var(--purple-darker);
+        }
+
+        &:hover {
+            background-color: var(--blue-dark);
+        }
+    }
+}

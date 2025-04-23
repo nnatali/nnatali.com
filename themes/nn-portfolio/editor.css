@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --font-primary: "Public Sans";
+  --layout: 1140px;
+  --black: black;
+  --almost-black: #2C2C2C;
+  --white: white;
+  --green-light: #E5EEBD;
+  --green: #c5d86d;
+  --blue: #0282CC;
+  --blue-light: #9ACDEB;
+  --blue-lighter: #C7E5F6;
+  --blue-dark: #035584;
+  --blue-darker: #003D60;
+  --salmon: #EB8D8D;
+  --purple: #8706D1;
+  --purple-light: #A85CD3;
+  --purple-lighter: #DFBFF1;
+  --purple-dark: #610198;
+  --purple-darker: #47016F;
+  --green: #46b450;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.block-editor-block-list__layout.is-root-container > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  max-width: 100% !important;
+}

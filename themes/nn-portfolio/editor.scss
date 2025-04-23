@@ -1,0 +1,12 @@
+@import 'assets/sass/fonts';
+@import 'assets/sass/mixins';
+@import 'assets/sass/variables';
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.block-editor-block-list__layout.is-root-container > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+	max-width: 100% !important;
+}

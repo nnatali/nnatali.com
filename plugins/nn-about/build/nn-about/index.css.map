@@ -1,0 +1,1 @@
+{"version":3,"file":"nn-about/index.css","mappings":";;;AAAA;EACC;AACD,C","sources":["webpack://nn-about/./src/nn-about/editor.scss"],"sourcesContent":[".wp-block-create-block-nn-about {\n\tfont-family: var(--font-primary);\n}\n"],"names":[],"sourceRoot":""}

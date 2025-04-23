@@ -1,0 +1,116 @@
+@import '../../../../themes/nn-portfolio/assets/sass/mixins';
+@import '../../../../themes/nn-portfolio/assets/sass/variables';
+
+.nn-about {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	overflow: hidden;
+
+	.container {
+		width: 100%;
+		max-width: var(--layout);
+		margin-left: auto;
+  		margin-right: auto;
+		position: relative;
+		padding: 78px 24px;
+
+		@include d {
+			padding: 200px 48px;
+		}
+	}
+
+	.wp-block-heading {
+		font-size: 24px;
+		line-height: 1.25;
+		font-weight: 500;
+		text-align: left;
+		margin-bottom: 12px;
+
+		@include d {
+			width: calc(100% - 470px);
+			font-size: 38px;
+			margin-bottom: 36px;
+		}
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 1.25;
+		font-weight: 200;
+		text-align: left;
+		margin-bottom: 12px;
+
+		@include d {
+			width: calc(100% - 470px);
+			font-size: 18px;
+			margin-bottom: 24px;
+		}
+
+		a {
+			color: currentColor;
+			text-decoration: none;
+			background-image: linear-gradient(180deg,transparent 45%,var(--blue-lighter) 0, var(--blue-lighter) 100%,transparent 0);
+			border-bottom: 1px solid transparent;
+			transition: all 0.25s;
+
+			&:hover {
+				border-color: var(--blue);
+			}
+
+			&:focus,
+			&:active,
+			&:focus-visible {
+				background-image: linear-gradient(180deg,transparent 45%,var(--purple-lighter) 0, var(--purple-lighter) 100%,transparent 0);
+			}
+		}
+	}
+
+	.wp-block-image {
+		border-radius: 100%;
+		display: block;
+		height: 250px;
+		width: 250px;
+		margin: 48px auto 0;
+		overflow: hidden;
+		position: relative;
+		z-index: 2;
+		mix-blend-mode: darken;
+
+		@include d {
+			width: 350px;
+			height: 350px;
+			position: absolute;
+			top: calc(50% - 175px);
+			right: 48px;
+			margin-top: 0;
+		}
+
+		img {
+			filter: grayscale(1) brightness(1);
+		}
+	}
+
+	&_circle {
+		background-color: var(--blue-light);
+		border-radius: 100%;
+		bottom: 68px;
+		display: block;
+		height: 250px;
+		width: 250px;
+		left: 100%;
+		overflow: hidden;
+		position: absolute;
+		z-index: 1;
+
+		@include d {
+			width: 350px;
+			height: 350px;
+			right: 72px;
+			top: 100%;
+			bottom: auto;
+			left: auto;
+		}
+	}
+
+}

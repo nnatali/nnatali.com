@@ -1,0 +1,137 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/nn-portfolio-container/style.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+:root {
+  --font-primary: "Public Sans";
+  --layout: 1140px;
+  --black: black;
+  --almost-black: #2C2C2C;
+  --white: white;
+  --green-light: #E5EEBD;
+  --green: #c5d86d;
+  --blue: #0282CC;
+  --blue-light: #9ACDEB;
+  --blue-lighter: #C7E5F6;
+  --blue-dark: #035584;
+  --blue-darker: #003D60;
+  --salmon: #EB8D8D;
+  --purple: #8706D1;
+  --purple-light: #A85CD3;
+  --purple-lighter: #DFBFF1;
+  --purple-dark: #610198;
+  --purple-darker: #47016F;
+  --green: #46b450;
+}
+
+.nn-portfolio-container {
+  background-color: var(--almost-black);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.nn-portfolio-container > .container {
+  width: 100%;
+  max-width: var(--layout);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding: 78px 24px;
+}
+@media (min-width: 992px) {
+  .nn-portfolio-container > .container {
+    padding: 200px 48px;
+  }
+}
+.nn-portfolio-container > .container > .wp-block-heading {
+  color: var(--white);
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 12px;
+}
+@media (min-width: 992px) {
+  .nn-portfolio-container > .container > .wp-block-heading {
+    font-size: 38px;
+    margin-bottom: 36px;
+  }
+}
+.nn-portfolio-container > .container > p {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 200;
+  text-align: center;
+  text-wrap: balance;
+  margin-bottom: 78px;
+}
+@media (min-width: 992px) {
+  .nn-portfolio-container > .container > p {
+    font-size: 18px;
+    margin-bottom: 100px;
+  }
+}
+.nn-portfolio-container > .container > p a {
+  color: currentColor;
+  text-decoration: none;
+  background-image: linear-gradient(180deg, transparent 45%, var(--green-light) 0, var(--green-light) 100%, transparent 0);
+  border-bottom: 1px solid transparent;
+  transition: all 0.25s;
+}
+.nn-portfolio-container > .container > p a:hover {
+  border-color: var(--blue);
+}
+.nn-portfolio-container > .container > p a:focus, .nn-portfolio-container > .container > p a:active, .nn-portfolio-container > .container > p a:focus-visible {
+  background-image: linear-gradient(180deg, transparent 45%, var(--purple-lighter) 0, var(--purple-lighter) 100%, transparent 0);
+}
+.nn-portfolio-container.for-fun {
+  background-color: var(--white);
+}
+.nn-portfolio-container.for-fun > .container > p,
+.nn-portfolio-container.for-fun > .container > .wp-block-heading {
+  color: var(--black);
+}
+.nn-portfolio-container.for-fun > .container > .wp-block-list {
+  list-style: none;
+  padding: 0;
+}
+.nn-portfolio-container.for-fun > .container > .wp-block-list li {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 200;
+  text-align: center;
+  text-wrap: balance;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+}
+@media (min-width: 992px) {
+  .nn-portfolio-container.for-fun > .container > .wp-block-list li {
+    font-size: 18px;
+  }
+}
+.nn-portfolio-container.for-fun > .container > .wp-block-list li:not(:last-child):after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 1px;
+  background-color: var(--black);
+  margin: 12px auto;
+}
+.nn-portfolio-container.for-fun > .container > .wp-block-list li a {
+  color: currentColor;
+  text-decoration: none;
+  background-image: linear-gradient(180deg, transparent 45%, var(--blue-lighter) 0, var(--blue-lighter) 100%, transparent 0);
+  border-bottom: 1px solid transparent;
+  transition: all 0.25s;
+}
+.nn-portfolio-container.for-fun > .container > .wp-block-list li a:hover {
+  border-color: var(--blue);
+}
+.nn-portfolio-container.for-fun > .container > .wp-block-list li a:focus, .nn-portfolio-container.for-fun > .container > .wp-block-list li a:active, .nn-portfolio-container.for-fun > .container > .wp-block-list li a:focus-visible {
+  background-image: linear-gradient(180deg, transparent 45%, var(--purple-lighter) 0, var(--purple-lighter) 100%, transparent 0);
+}
+
+/*# sourceMappingURL=style-index.css.map*/

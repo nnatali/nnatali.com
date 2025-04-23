@@ -1,0 +1,101 @@
+html {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.post,
+.page,
+figure,
+blockquote,
+.widget,
+.entry-content,
+dl,
+dt,
+dd,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+body.admin-bar {
+    padding-bottom: 46px !important;
+
+    @include d {
+        padding-bottom: 32px !important;
+    }
+}
+
+#wpadminbar {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+}
+
+html body {
+    color: var(--black);
+    font-family: var(--font-primary);
+    background-color: var(--white);
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /*
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    */
+
+    * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    a,
+    button,
+    input,
+    textarea,
+    select {
+        &:active,
+        &:focus,
+        &:focus-visible {
+            outline: none;
+        }
+    }
+}
+
+.site {
+    width: 100%;
+}
+
+.post {
+    width: 100%;
+    overflow: hidden;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+:root :where(.is-layout-flow) > * {
+    margin: 0;
+}

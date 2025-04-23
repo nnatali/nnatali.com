@@ -1,0 +1,1 @@
+{"version":3,"file":"nn-portfolio-container/index.css","mappings":";;;AAAA;EACC;AACD,C","sources":["webpack://nn-portfolio-container/./src/nn-portfolio-container/editor.scss"],"sourcesContent":[".nn-portfolio-container {\n\tfont-family: var(--font-primary);\n}\n"],"names":[],"sourceRoot":""}

@@ -1,0 +1,234 @@
+:root {
+  --font-primary: "Public Sans";
+  --layout: 1140px;
+  --black: black;
+  --almost-black: #2C2C2C;
+  --white: white;
+  --green-light: #E5EEBD;
+  --green: #c5d86d;
+  --blue: #0282CC;
+  --blue-light: #9ACDEB;
+  --blue-lighter: #C7E5F6;
+  --blue-dark: #035584;
+  --blue-darker: #003D60;
+  --salmon: #EB8D8D;
+  --purple: #8706D1;
+  --purple-light: #A85CD3;
+  --purple-lighter: #DFBFF1;
+  --purple-dark: #610198;
+  --purple-darker: #47016F;
+  --green: #46b450;
+}
+
+.nn-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: var(--blue);
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  animation: maxH 1s 2.5s forwards;
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  .nn-logo {
+    animation-name: maxHD;
+  }
+}
+.nn-logo .container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+.nn-logo canvas {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 0;
+  left: 0;
+  z-index: 1;
+  animation: height 0.5s 1.8s forwards;
+}
+@media (max-width: 991px) {
+  .nn-logo canvas {
+    height: 400px !important;
+  }
+}
+.nn-logo h1 {
+  display: block;
+  width: 70%;
+  max-width: 180px;
+  margin: auto auto 20px;
+  position: relative;
+  height: 109px;
+  z-index: 2;
+}
+@media (max-width: 991px) {
+  .nn-logo h1 {
+    transform: scale(0.8) translateY(4px);
+  }
+}
+.nn-logo h1:after {
+  content: "";
+  display: block;
+  width: 15%;
+  height: 83.2%;
+  background: var(--white);
+  opacity: 0.6;
+  position: absolute;
+  transform: rotate(-40deg);
+  top: -1.75%;
+  left: 64.7%;
+  z-index: 1;
+}
+.nn-logo h1:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: calc(100% - 1px);
+  background: var(--blue);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  animation: logo3 1.75s forwards 0.35s;
+}
+.nn-logo h1 span {
+  text-indent: -9999px;
+  overflow: hidden;
+  display: block;
+}
+.nn-logo h1 span:before, .nn-logo h1 span:nth-of-type(1):after {
+  content: "";
+  display: block;
+  width: 18%;
+  height: 0%;
+  background: var(--white);
+  position: absolute;
+}
+.nn-logo h1 span:nth-of-type(1):before {
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  animation: logo1 0.75s forwards;
+}
+.nn-logo h1 span:nth-of-type(1):after {
+  bottom: 20%;
+  right: 1.5%;
+  height: 0%;
+  width: 16%;
+  z-index: 3;
+  animation: logo2 0.7s forwards 1.6s;
+}
+.nn-logo h1 span:nth-of-type(2):before {
+  bottom: 0;
+  left: 44%;
+  z-index: 3;
+  animation: logo1 0.6s forwards 0.9s;
+}
+.nn-logo h1 span:nth-of-type(2):after {
+  content: "";
+  display: block;
+  width: 17%;
+  height: 105%;
+  background: var(--white);
+  opacity: 0.6;
+  position: absolute;
+  transform: rotate(-38deg);
+  top: -2.5%;
+  left: 22.5%;
+  z-index: 1;
+}
+.nn-logo h2 {
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 11px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0 auto auto;
+  padding: 1px 7px;
+  opacity: 0;
+  animation: opacity 0.4s 2.1s forwards;
+  transform: translateX(-1px) translateY(-13px);
+  z-index: 3;
+  position: relative;
+}
+@media (min-width: 992px) {
+  .nn-logo h2 {
+    transform: translateX(-1px);
+    font-size: 14px;
+    padding: 0 7px;
+  }
+}
+.nn-logo.nn-logo-reduced {
+  animation-duration: 0s;
+  animation-delay: 0s;
+}
+.nn-logo.nn-logo-reduced *,
+.nn-logo.nn-logo-reduced *:before,
+.nn-logo.nn-logo-reduced *:after {
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+}
+
+@keyframes logo1 {
+  100% {
+    height: 100%;
+  }
+}
+@keyframes logo2 {
+  100% {
+    height: 80%;
+  }
+}
+@keyframes logo3 {
+  0% {
+    width: 100%;
+  }
+  57% {
+    width: 49%;
+  }
+  58% {
+    width: 49%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+@keyframes opacity {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes width {
+  100% {
+    width: 100vw;
+  }
+}
+@keyframes height {
+  100% {
+    height: 500px;
+  }
+}
+@keyframes remove {
+  100% {
+    height: 0%;
+  }
+}
+@keyframes maxH {
+  100% {
+    max-height: 300px;
+  }
+}
+@keyframes maxHD {
+  100% {
+    max-height: 546px;
+  }
+}

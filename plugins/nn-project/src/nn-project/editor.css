@@ -1,0 +1,10 @@
+.nn-project {
+  font-family: var(--font-primary);
+}
+.nn-project .block-editor-block-list__layout:not(.wp-block-list) {
+  position: static;
+}
+.nn-project .wp-block-video:before {
+  content: none;
+  display: none;
+}

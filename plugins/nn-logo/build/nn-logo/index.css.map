@@ -1,0 +1,1 @@
+{"version":3,"file":"nn-logo/index.css","mappings":";;;AAAA;EACC;AACD,C","sources":["webpack://nn-logo/./src/nn-logo/editor.scss"],"sourcesContent":[".nn-logo {\n\tfont-family: var(--font-primary);\n}\n"],"names":[],"sourceRoot":""}

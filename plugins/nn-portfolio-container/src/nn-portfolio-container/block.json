@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/nn-portfolio-container",
+	"version": "0.1.0",
+	"title": "NN Portfolio Container",
+	"category": "nn-blocks",
+	"icon": "excerpt-view",
+	"description": "Container for my personal portfolio",
+	"example": {},
+	"supports": {
+        "html": false,
+        "align": true,
+        "customClassName": true,
+        "inserter": true,
+        "reusable": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": ""
+        },
+		"text": {
+            "type": "string",
+            "default": ""
+        }
+    },
+	"textdomain": "nn-portfolio-container",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
